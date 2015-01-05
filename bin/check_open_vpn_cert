@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'openvpn_cert_nagios'
+rescue LoadError
+  require 'rubygems'
+  root = File.dirname(File.dirname(__FILE__))
+  $: << (File.expand_path 'lib', root)
+  require 'openvpn_cert_nagios'
+end
+
+CertCheck.new.run
