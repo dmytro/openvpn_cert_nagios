@@ -1,8 +1,9 @@
 $:.push File.expand_path("../lib", __FILE__)
 
+require "openvpn_cert_nagios/version"
 spec = Gem::Specification.new do |s|
   s.name = 'openvnp_cert_nagios'
-  s.version = File.read('version.txt').strip
+  s.version = CertCheck::VERSION
   s.license = 'MIT'
   s.author = 'Dmytro Kovalov'
   s.email = 'dmytro.kovalov@gmail.com'
