@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "nagios_check"
 require 'open3'
 
