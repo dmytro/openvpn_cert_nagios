@@ -9,16 +9,16 @@ class CertCheck
   enable_timeout
 
   def check
-    expiration, messages = 9999 , []
 
-    certs.each do |file|
+    result = certs.reduce({days: 9999, message: []}) do |memo, file|
       cert = Cert.new(file)
-
-      expiration = [cert.expires_in, expiration].min
-      messages << cert.message
+      memo[:message] << cert.message
+      memo[:days] = [cert.expires_in, memo[:days]].min
+      memo
     end
-    store_value :expires, expiration
-    store_message messages.join(",")
+
+    store_value :expires, result[:days]
+    store_message result[:message].sort.join(",").delete(' ')
   end
 
   def certs

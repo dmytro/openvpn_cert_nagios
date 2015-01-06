@@ -11,7 +11,11 @@ class CertCheck
     end
 
     def message
-      "#{File.basename(path, ".crt")}:#{expires_in.to_s}"
+      "%4d:%s" % [expires_in, name]
+    end
+
+    def name
+      File.basename(path, ".crt")
     end
 
     def expiration_date
