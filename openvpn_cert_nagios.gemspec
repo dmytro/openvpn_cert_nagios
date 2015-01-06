@@ -28,7 +28,6 @@ EOF
   # GEMS
 
   s.add_dependency 'nagios_check', '~> 0.0.4'
-  s.add_dependency 'activesupport', '~> 3.2'
 
   # Dev
   s.add_development_dependency "pry", "~> 0.10"

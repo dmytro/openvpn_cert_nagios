@@ -1,5 +1,4 @@
 class CertCheck
-  require 'pry'
   class Cert
     def initialize(path)
       @path = path
