@@ -22,7 +22,7 @@ CLI options
 
 - --path <PATH>, -P <PATH> - UNIX path to OpenVPN EasyRSA keys directory (should be readable by process running Nagios)
 
-Both -w and -c options should be specified as "<NUMBER>:" according to Nagios ranges [format guidelines](https://nagios-plugins.org/doc/guidelines.html#THRESHOLDFORMAT)
+Both -w and -c options should be specified as `NUMBER:` according to Nagios ranges [format guidelines](https://nagios-plugins.org/doc/guidelines.html#THRESHOLDFORMAT)
 
 LICENSE
 -----------
