@@ -22,7 +22,7 @@ class CertCheck
   end
 
   def certs
-    @certs ||= Dir.glob("#{ options.path }/*.crt")
+    @certs ||= Dir.new(options.path).entries.find_all{ |f| f =~ /.*\.crt$/ }.map { |f| "#{ options.path }/#{ f }" }
   end
 
 end
