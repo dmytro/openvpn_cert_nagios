@@ -6,7 +6,6 @@ class CertCheck
   class Shell
     def self.exe(cmd)
 
-      puts "DEBUG: #{cmd}" if $debug
       Open3.popen3({"PATH" => "/usr/bin:/bin:/usr/sbin:/sbin"}, cmd) do |stdin, stdout, stderr, process|
 
         stdin.close
