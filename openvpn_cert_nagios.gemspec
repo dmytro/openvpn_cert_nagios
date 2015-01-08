@@ -18,7 +18,7 @@ EOF
 
   s.required_ruby_version = '>= 2.0.0'
 
-  s.files = ( %w{ bin/check_open_vpn_cert version.txt} +
+  s.files = ( %w{ bin/check_open_vpn_cert } +
               Dir.glob("{bin,lib,spec,config,test}/**/*")
              ).uniq
 
@@ -28,7 +28,7 @@ EOF
   s.default_executable = 'check_open_vpn_cert'
   # GEMS
 
-  s.add_dependency 'nagios_check', '~> 0.0.4'
+  s.add_dependency 'nagios_check', '~> 0.0'
 
   # Dev
   s.add_development_dependency "pry", "~> 0.10"
